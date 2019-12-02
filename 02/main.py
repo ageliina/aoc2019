@@ -37,9 +37,8 @@ assert decode("1,1,1,4,99,5,6,0,99") == "30,1,1,4,2,5,6,0,99"
 
 program = open("input", 'r').readline().strip()
 
-for noun in range(100):
-    for verb in range(100):
-        output = decode(program, noun, verb)
-        test = int(output.split(',')[0])
-        if test == 3850704 or test == 19690720:
-            print(test, 100 * noun + verb)
+for noun, verb in product(range(100), range(100)):
+    output = decode(program, noun, verb)
+    test = int(output.split(',')[0])
+    if test == 3850704 or test == 19690720:
+        print(test, 100 * noun + verb)
