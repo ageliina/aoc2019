@@ -6,15 +6,6 @@
 aoc2019.4
 """
 
-low, high = 284639, 748759
-
-count = 0
-for i in range(low, high + 1):
-    number = str(i)
-    if sorted(number) != list(number):
-        continue
-    g = {j: number.count(str(j)) for j in range(10)}
-    if 2 not in g.values():
-        continue
-    count += 1
-print(count)
+from collections import Counter
+print(sum(1 for i in map(str, range(284639, 748759 + 1)
+          if sorted(i) == list(i) and 2 in Counter(i).values()))
