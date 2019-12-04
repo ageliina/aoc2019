@@ -3,7 +3,7 @@
 # Email: akke.viitanen@helsinki.fi
 
 """
-aoc2019 template
+aoc2019.3
 """
 
 import sys

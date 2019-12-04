@@ -3,7 +3,7 @@
 # Email: akke.viitanen@helsinki.fi
 
 """
-A python3 script template. Remove this line and add your description.
+aoc2019.4
 """
 
 low, high = 284639, 748759
